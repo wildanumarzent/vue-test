@@ -82,13 +82,12 @@ export default {
     selectImage() {
       let file = this.$refs.file.files.item(0)
       if (file.size > 2024 * 2024) {
-        alert('File too big (> 2MB)')
-        // this.showToatWarning('File too big (> 2MB)')
+        this.showToatWarning('File too big (> 2MB)')
         return false
       }
 
       if (!['image/png', 'image/jpeg', 'image/svg'].includes(file.type)) {
-        alert('file not supported. suport JPG, PNG, JPEG, SVG')
+        this.showToatWarning('file not supported. suport JPG, PNG, JPEG, SVG')
         return false
       }
 
