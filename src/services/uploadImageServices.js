@@ -1,4 +1,3 @@
-import { data } from 'autoprefixer'
 import imgbb from '../constants/imgbb'
 
 class UploadFilesService {
